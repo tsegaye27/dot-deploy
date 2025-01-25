@@ -1,10 +1,7 @@
-// function to handle api call
-
 import axios from "axios";
 import { call, put, takeLatest } from "redux-saga/effects";
 import { signUpFailure, signUpRequest, signUpSuccess } from "./signUpSlice";
 
-// worker saga: handle requests
 function* workSignUpSaga(action) {
 	try {
 		const response = yield call(
@@ -24,7 +21,6 @@ function* workSignUpSaga(action) {
 	}
 }
 
-// watcher saga: watches for the action and calls worker saga
 export function* watchSignUpSagas() {
 	yield takeLatest(signUpRequest.type, workSignUpSaga);
 }

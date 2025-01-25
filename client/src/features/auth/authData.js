@@ -22,7 +22,6 @@ export const storeUserData = (user) => {
 export const getUserData = (isToken = false) => {
 	const storedData = JSON.parse(localStorage.getItem("userData"));
 	const token = Cookies.get("jwt");
-    console.log(token)
 	if (storedData && token && storedData.expiry > Date.now()) {
 		if (isToken) {
 			return token;

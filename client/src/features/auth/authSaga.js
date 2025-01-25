@@ -59,7 +59,7 @@ function* workLogoutSaga() {
 			}
 		);
 		yield put(resetNotifier());
-		yield put(setNotifier({ success: "Log out successfully!" }));
+		yield put(setNotifier({ success: "Logged out successfully!" }));
 		yield put(logOutSuccess());
 	} catch (error) {
 		const message = error.response
