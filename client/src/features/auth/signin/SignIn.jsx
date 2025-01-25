@@ -23,7 +23,7 @@ const SignIn = () => {
 		if (isUserLoggedIn) {
 			const userData = getUserData();
 			dispatch(authStatus({ isUserSignedIn: true, userData: userData }));
-			navigateTo(-1);
+			navigateTo('/');
 		}
 	}, [isUserLoggedIn, navigateTo, dispatch]);
 
@@ -90,7 +90,7 @@ const SignIn = () => {
 						<span className="text-slate-300">have no account yet?</span>
 						<button
 							className="rounded-md px-2 text-color-5 font-semibold tracking-wide transition-all duration-300 underline underline-offset-2 hover:text-color-7"
-							onClick={(event) => navigateTo("/signup")}
+							onClick={() => navigateTo("/signup")}
 						>
 							Sign Up
 						</button>
