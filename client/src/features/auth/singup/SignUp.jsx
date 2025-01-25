@@ -108,7 +108,7 @@ const SignUp = () => {
 						<span className="text-slate-300">already have account?</span>
 						<button
 							className="rounded-md px-2 text-color-5 font-semibold tracking-wide transition-all duration-300 underline underline-offset-2 hover:text-color-7"
-							onClick={(event) => navigateTo("/login")}
+							onClick={() => navigateTo("/login")}
 						>
 							Login
 						</button>
