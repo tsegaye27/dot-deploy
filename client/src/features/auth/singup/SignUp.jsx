@@ -20,12 +20,12 @@ const SignUp = () => {
 
 	const navigateTo = useNavigate();
 	const dispatch = useDispatch();
-
+    
 	useEffect(() => {
 		if (isUserSignedUp) {
 			const userData = getUserData();
 			dispatch(authStatus({ isUserSignedIn: true, userData: userData }));
-			navigateTo(-1);
+			navigateTo("/");
 		}
 	}, [isUserSignedUp, navigateTo, dispatch]);
 
